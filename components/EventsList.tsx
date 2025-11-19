@@ -1,8 +1,8 @@
-"use client";
+'use client';
+import { useRouter } from 'next/navigation';
 
-import { Event } from "@/types/event.ts";
-import { formatDate } from "@/lib/utils.ts";
-import { useRouter } from "next/navigation";
+import { Event } from '../types/event.ts';
+import { formatDate } from '../lib/utils.ts';
 
 interface EventsListProps {
   events: Event[];
@@ -32,17 +32,13 @@ export function EventsList({ events, title, selectedEventId }: EventsListProps) 
             onClick={() => handleEventClick(event.id)}
             className={`w-full text-left p-4 rounded-lg border transition-all duration-200 ${
               selectedEventId === event.id
-                ? "bg-blue-50 border-blue-300 shadow-md"
-                : "bg-white border-gray-200 hover:border-blue-300 hover:shadow-sm"
+                ? 'bg-blue-50 border-blue-300 shadow-md'
+                : 'bg-white border-gray-200 hover:border-blue-300 hover:shadow-sm'
             }`}
           >
-            <div className="font-semibold text-gray-900 mb-1">
-              {event.title}
-            </div>
+            <div className="font-semibold text-gray-900 mb-1">{event.title}</div>
             {event.data.start && (
-              <div className="text-sm text-gray-600">
-                {formatDate(event.data.start)}
-              </div>
+              <div className="text-sm text-gray-600">{formatDate(event.data.start)}</div>
             )}
           </button>
         ))}
@@ -50,4 +46,3 @@ export function EventsList({ events, title, selectedEventId }: EventsListProps) 
     </div>
   );
 }
-

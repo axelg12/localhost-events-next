@@ -1,7 +1,8 @@
-import { fetchEvents } from '@/lib/api.ts';
-import { EventsList } from '@/components/EventsList.tsx';
-import { EventDetail } from '@/components/EventDetail.tsx';
 import Image from 'next/image';
+
+import { fetchEvents } from '../lib/api.ts';
+import { EventsList } from '../components/EventsList.tsx';
+import { EventDetail } from '../components/EventDetail.tsx';
 
 interface HomeProps {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
