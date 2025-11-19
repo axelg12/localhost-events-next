@@ -52,7 +52,7 @@ export function EventDetail({ event }: EventDetailProps) {
               />
             </svg>
             <div>
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">Start</p>
+              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">Hefst</p>
               <p className="text-gray-900">{formatDate(event.data.start)}</p>
             </div>
           </div>
@@ -74,7 +74,7 @@ export function EventDetail({ event }: EventDetailProps) {
               />
             </svg>
             <div>
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">End</p>
+              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">Lýkur</p>
               <p className="text-gray-900">{formatDate(event.data.end)}</p>
             </div>
           </div>
@@ -83,7 +83,7 @@ export function EventDetail({ event }: EventDetailProps) {
 
       {event.description && (
         <div className="mb-6">
-          <h2 className="text-lg font-semibold text-gray-900 mb-2">Description</h2>
+          <h2 className="text-lg font-semibold text-gray-900 mb-2">Lýsing</h2>
           <p className="text-gray-700 whitespace-pre-line leading-relaxed text-sm">
             {event.description}
           </p>
@@ -97,7 +97,7 @@ export function EventDetail({ event }: EventDetailProps) {
           rel="noopener noreferrer"
           className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm"
         >
-          <span>View Event</span>
+          <span>Opna viðburð</span>
           <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"

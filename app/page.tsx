@@ -44,8 +44,8 @@ export default async function Home({ searchParams }: HomeProps) {
         {/* Header */}
         <div className="mb-8 text-center flex flex-col items-center">
           <Image src="/logo.png" alt="Localhost Events" width={100} height={100} />
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Localhost Events</h1>
-          <p className="text-gray-600">Browse upcoming and past events</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Localhost viðburðir</h1>
+          <p className="text-gray-600">Viðburðir á döfinni</p>
         </div>
 
         {/* Main Layout */}
@@ -56,14 +56,14 @@ export default async function Home({ searchParams }: HomeProps) {
               {upcomingEvents.length > 0 && (
                 <EventsList
                   events={upcomingEvents}
-                  title="Upcoming Events"
+                  title="Viðburðir"
                   selectedEventId={selectedEventId}
                 />
               )}
               {pastEvents.length > 0 && (
                 <EventsList
                   events={pastEvents}
-                  title="Past Events"
+                  title="Gamlir viðburðir"
                   selectedEventId={selectedEventId}
                 />
               )}
